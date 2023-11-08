@@ -13,10 +13,13 @@ public class InputView {
 
 	private final Validator<String> InputValidator;
 	private final Validator<String> BonusNumberValidator;
+	private final Validator<String> LottoNumbersValidator;
 
-	public InputView(Validator<String> InputValidator, Validator<String> BonusNumberValidator) {
+	public InputView(Validator<String> InputValidator, Validator<String> BonusNumberValidator,
+			Validator<String> LottoNumbersValidator) {
 		this.InputValidator = InputValidator;
 		this.BonusNumberValidator = BonusNumberValidator;
+		this.LottoNumbersValidator = LottoNumbersValidator;
 	}
 
 	public int inputMoneyAmount() {
@@ -29,6 +32,7 @@ public class InputView {
 	public List<Integer> inputWinningNumber() {
 		System.out.println(INPUT_WINNING_NUMBER);
 		String numbers = Console.readLine();
+		LottoNumbersValidator.validate(numbers);
 		return toIntegerList(numbers);
 	}
 

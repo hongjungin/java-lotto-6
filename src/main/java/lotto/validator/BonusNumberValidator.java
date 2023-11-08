@@ -3,7 +3,9 @@ package lotto.validator;
 import lotto.model.ErrorMessage;
 
 public class BonusNumberValidator implements Validator<String> {
-
+	private static final int MIN_LOTTO_NUMBER = 1;
+	private static final int MAX_LOTTO_NUMBER = 45;
+	
 	@Override
 	public void validate(String input) {
 		validateNaturalNumber(input);
@@ -23,7 +25,7 @@ public class BonusNumberValidator implements Validator<String> {
 
 	private void validateInRange(String input) {
 		int number = Integer.parseInt(input);
-		if (number < 1 || number > 45) {
+		if (number < MIN_LOTTO_NUMBER || number > MAX_LOTTO_NUMBER) {
 			throw new IllegalArgumentException(ErrorMessage.IS_NOT_IN_RANGE.getMessage());
 		}
 	}
