@@ -17,13 +17,13 @@ public enum Prize {
 	}
 	
 	public static Prize getRankByLotto(Lotto lotto, WinningNumbers winningLotto) {
-        int matchCount = lotto.getMatchCount(winningLotto.WinningNumbers());
+        int matchCount = lotto.getMatchCount(winningLotto.getWinningLottoNumbers());
         boolean isBonusMatch = lotto.getBonusNumber(winningLotto.getBonusNumber());
         return getRank(matchCount, isBonusMatch);
     }
 	
-	private static Rank getRank(int matchCount, boolean isBonusMatch) {
-        if (matchCount == 2) {
+	private static Prize getRank(int matchCount, boolean isBonusMatch) {
+        if (matchCount == 6) {
             return FIRST;
         }
         if (matchCount == 5 && isBonusMatch) {
