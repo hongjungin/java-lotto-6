@@ -13,6 +13,7 @@ public class OutputView {
 	}
 
 	public void printLottoCount(int lottoCount) {
+		System.out.print("\n");
 		System.out.printf((PURCHASED_LOTTO_COUNT) + "%n", lottoCount);
 	}
 
@@ -33,14 +34,17 @@ public class OutputView {
 	}
 
 	public void winningNumbers() {
+		System.out.print("\n");
 		System.out.println(INPUT_WINNING_NUMBER);
 	}
 
 	public void bonusNumber() {
+		System.out.print("\n");
 		System.out.println(INPUT_BONUS_NUMBER);
 	}
 
 	public void printStatic() {
+		System.out.print("\n");
 		System.out.println("당첨 통계");
 		System.out.println("---");
 	}
