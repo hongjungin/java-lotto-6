@@ -8,10 +8,17 @@ public class BonusNumber {
 	private int number;
 
 	public BonusNumber(int number) {
+		validateInRange(number);
 		this.number = number;
 	}
 
 	public int getNumber() {
 		return number;
 	}
+	
+	private void validateInRange(Integer number) {
+        if (number < MIN_LOTTO_NUMBER || number > MAX_LOTTO_NUMBER) {
+            throw new IllegalArgumentException();
+        }
+    }
 }
