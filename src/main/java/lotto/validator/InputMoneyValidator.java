@@ -4,7 +4,8 @@ public class InputMoneyValidator implements Validator<String> {
 
 	@Override
 	public void validate(String input) {
-
+		validateNaturalNumber(input);
+		validateMultipleOfThousand(input);
 	}
 
 	private void validateNaturalNumber(String input) {

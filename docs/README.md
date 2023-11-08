@@ -2,13 +2,13 @@
 
 ### 로또 구입 금액 입력
 
-[ ] 로또 구입 금액을 입력 받음 
+[X] 로또 구입 금액을 입력 받음 
 
-[ ] 구입 금액은 1,000원 단위로 입력 빋음
+[X] 구입 금액은 1,000원 단위로 입력 빋음
 
 *예외*
 
-[ ] 1,000원으로 나누어 떨어지지 않는 경우 예외 처리 IllegalArgumentException
+[X] 1,000원으로 나누어 떨어지지 않는 경우 예외 처리 IllegalArgumentException
  
  *Exception이 아닌 IllegalArgumentException 시용 -> 사용자가 값을 잘못 입력한 경우*
  
