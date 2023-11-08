@@ -48,7 +48,7 @@ public class LottoNumbersValidator implements Validator<String> {
 	private void validateInRange(String input) {
 		int number = Integer.parseInt(input);
 		if (number < MIN_LOTTO_NUMBER || number > MAX_LOTTO_NUMBER) {
-			throw new IllegalArgumentException(ErrorMessage.IS_NOT_NATURAL_NUMBER.getMessage());
+			throw new IllegalArgumentException(ErrorMessage.IS_NOT_IN_RANGE.getMessage());
 		}
 	}
 
