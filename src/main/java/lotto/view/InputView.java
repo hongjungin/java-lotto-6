@@ -19,6 +19,7 @@ public class InputView {
 		this.LottoNumbersValidator = LottoNumbersValidator;
 	}
 
+
 	public int inputMoneyAmount() {
 		String money = Console.readLine();
 		InputValidator.validate(money);
